@@ -1,0 +1,21 @@
+{
+  "name": "erp-v5",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:api": "bun run --watch services/api/index.ts",
+    "build:api": "bun build services/api/index.ts --outdir services/api/dist",
+    "dev:pdf": "bun run --watch services/pdf/index.ts",
+    "build:pdf": "bun build services/pdf/index.ts --outdir services/pdf/dist"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "prettier": "^3.1.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "workspaces": [
+    "services/*"
+  ]
+}
